@@ -1,0 +1,13 @@
+{
+	'groceries': {
+		'columns': {
+			'name': str, 
+			'quantidy': int,
+		}, 
+		'rows': [
+			("Bananas", 4), 
+			("Peanut Butter", 1), 
+			("Dark Chocolate Bars", 2)
+		]
+	}
+}
