@@ -27,7 +27,7 @@ class Database():
 			raise TypeError("values should be a list")
 		nvalues = []
 		for value in values:
-			exec "nvalues.append(self.db[table]['columns'][%s][1](value))" % values.index(value)
+			exec "nvalues.append(%s(value))" % self.db[table]['columns'][values.index(value)][1]
 		self.db[table]['rows'][rowid] = nvalues
 	def deleteTable(self, tablename):
 		del self.db[tablename]
